@@ -1,0 +1,59 @@
+{
+    "name": "loophp/phpunit-iterable-assertions",
+    "description": "Iterable assertions for PHPUnit",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "phpunit"
+    ],
+    "readme": "README.md",
+    "authors": [
+        {
+            "name": "Pol Dellaiera",
+            "email": "pol.dellaiera@protonmail.com",
+            "homepage": "https://not-a-number.io",
+            "role": "author"
+        }
+    ],
+    "homepage": "https://github.com/loophp/phpunit-iterable-assertions",
+    "support": {
+        "issues": "https://github.com/loophp/phpunit-iterable-assertions/issues",
+        "source": "https://github.com/loophp/phpunit-iterable-assertions"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/drupol"
+        }
+    ],
+    "require": {
+        "php": ">= 7.4",
+        "loophp/iterators": "^1.0"
+    },
+    "require-dev": {
+        "drupol/php-conventions": "^5",
+        "infection/infection": ">= 0.24.0",
+        "phpstan/phpstan-strict-rules": "^1.0",
+        "phpunit/php-code-coverage": "^9.2",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "loophp\\PhpUnitIterableAssertions\\": "./src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\loophp\\PhpUnitIterableAssertions\\": "./tests/unit/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "changelog-unreleased": "docker-compose run auto_changelog -c .auto-changelog -u",
+        "changelog-version": "docker-compose run auto_changelog -c .auto-changelog -v",
+        "grumphp": "./vendor/bin/grumphp run",
+        "infection": "vendor/bin/infection run -j 2"
+    }
+}
