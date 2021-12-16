@@ -11,10 +11,9 @@ namespace tests\loophp\PhpUnitIterableAssertions\Constraint;
 
 use ArrayIterator;
 use ArrayObject;
-use IteratorAggregate;
+use loophp\iterators\ClosureIteratorAggregate;
 use loophp\PhpUnitIterableAssertions\Constraint\IsIdenticalIterable;
 use PHPUnit\Framework\TestCase;
-use Traversable;
 
 /**
  * @coversDefaultClass \loophp\PhpUnitIterableAssertions
@@ -49,28 +48,10 @@ final class IsIdenticalIterableTest extends TestCase
             range('c', 'a'),
         ];
 
-        $iterator = new class implements IteratorAggregate
-        {
-            private iterable $iterable;
-
-            public function withIterable(iterable $iterable): self
-            {
-                $clone = clone $this;
-                $clone->iterable = $iterable;
-
-                return $clone;
-            }
-
-            public function getIterator(): Traversable
-            {
-                yield from $this->iterable;
-            }
-        };
-
         yield [
-            $iterator->withIterable(range('a', 'c')),
-            $iterator->withIterable(range('a', 'c')),
-            range('c', 'a')
+            new ClosureIteratorAggregate(static fn () => yield from range('a', 'c')),
+            new ClosureIteratorAggregate(static fn () => yield from range('a', 'c')),
+            range('c', 'a'),
         ];
     }
 

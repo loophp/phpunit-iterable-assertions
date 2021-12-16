@@ -13,12 +13,22 @@ use loophp\iterators\IterableIterator;
 use MultipleIterator;
 use PHPUnit\Framework\Constraint\Constraint;
 
+/**
+ * @template TKey
+ * @template T
+ */
 final class IsIdenticalIterable extends Constraint
 {
     private int $limit;
 
+    /**
+     * @var iterable<TKey, T>
+     */
     private iterable $subject;
 
+    /**
+     * @param iterable<TKey, T> $subject
+     */
     public function __construct(iterable $subject, int $limit = 0)
     {
         $this->subject = $subject;
@@ -31,7 +41,7 @@ final class IsIdenticalIterable extends Constraint
     }
 
     /**
-     * @param iterable $other
+     * @param iterable<TKey, T> $other
      */
     protected function matches($other): bool
     {

@@ -1,0 +1,12 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\#1 \\$other \\(iterable\\<TKey, T\\>\\) of method loophp\\\\PhpUnitIterableAssertions\\\\Constraint\\\\IsIdenticalIterable\\:\\:matches\\(\\) should be contravariant with parameter \\$other \\(mixed\\) of method PHPUnit\\\\Framework\\\\Constraint\\\\Constraint\\:\\:matches\\(\\)$#"
+			count: 1
+			path: src/Constraint/IsIdenticalIterable.php
+
+		-
+			message: "#^Parameter \\#1 \\$other \\(iterable\\<TKey, T\\>\\) of method loophp\\\\PhpUnitIterableAssertions\\\\Constraint\\\\IsNotIdenticalIterable\\:\\:matches\\(\\) should be contravariant with parameter \\$other \\(mixed\\) of method PHPUnit\\\\Framework\\\\Constraint\\\\Constraint\\:\\:matches\\(\\)$#"
+			count: 1
+			path: src/Constraint/IsNotIdenticalIterable.php
+
