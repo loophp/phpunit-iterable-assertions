@@ -9,7 +9,9 @@ declare(strict_types=1);
 
 namespace loophp\PhpUnitIterableAssertions\Constraint;
 
-use loophp\iterators\IterableIterator;
+use Iterator;
+use loophp\iterators\IterableIteratorAggregate;
+use loophp\iterators\MultipleIterableAggregate;
 use MultipleIterator;
 use PHPUnit\Framework\Constraint\Constraint;
 
@@ -45,12 +47,12 @@ final class IsNotIdenticalIterable extends Constraint
      */
     protected function matches($other): bool
     {
-        $i1 = new IterableIterator($this->subject);
-        $i2 = new IterableIterator($other);
+        [$subject, $other] = array_map(
+            static fn (iterable $iterable): Iterator => (new IterableIteratorAggregate($iterable))->getIterator(),
+            [$this->subject, $other]
+        );
 
-        $mi = new MultipleIterator(MultipleIterator::MIT_NEED_ALL);
-        $mi->attachIterator($i1);
-        $mi->attachIterator($i2);
+        $mi = new MultipleIterableAggregate([$subject, $other], MultipleIterator::MIT_NEED_ALL);
 
         $index = 0;
 
@@ -71,7 +73,7 @@ final class IsNotIdenticalIterable extends Constraint
         }
 
         if (0 === $this->limit) {
-            if ($i1->valid() !== $i2->valid()) {
+            if ($subject->valid() !== $other->valid()) {
                 return true;
             }
         }
