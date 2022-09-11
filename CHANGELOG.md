@@ -5,7 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.2](https://github.com/loophp/phpunit-iterable-assertions/compare/1.0.1...1.0.2)
+## [1.0.3](https://github.com/loophp/phpunit-iterable-assertions/compare/1.0.2...1.0.3)
+
+### Commits
+
+- feat: Implements `additionalFailureDescription` with relevant information. [`58e2c5a`](https://github.com/loophp/phpunit-iterable-assertions/commit/58e2c5a85bd51dd85d40860ce80ccc0efdbc0a21)
+- docs: Fix README link. [`ef26266`](https://github.com/loophp/phpunit-iterable-assertions/commit/ef26266fdcb66e5467945a6b086d24eb712d7d77)
+
+## [1.0.2](https://github.com/loophp/phpunit-iterable-assertions/compare/1.0.1...1.0.2) - 2022-09-11
 
 ### Merged
 
@@ -19,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
+- docs: Update CHANGELOG. [`d7b375b`](https://github.com/loophp/phpunit-iterable-assertions/commit/d7b375b8192d6a34d565891b6d335f46cf682bab)
 - chore: Require `loophp/iterators` 2 now. [`3c60587`](https://github.com/loophp/phpunit-iterable-assertions/commit/3c60587eb392769b8427cc6f4e2b3dd074975c67)
 - chore: Summer cleanup and modernizations. [`c9525c1`](https://github.com/loophp/phpunit-iterable-assertions/commit/c9525c1766fcc5e902d10c93e3af52e42fe2f6ce)
 - chore: Update Infection configuration file. [`4ad0942`](https://github.com/loophp/phpunit-iterable-assertions/commit/4ad0942488a5f8f8de2f6439b5d04b0c8ffb11ea)
