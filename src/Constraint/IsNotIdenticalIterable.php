@@ -12,6 +12,7 @@ namespace loophp\PhpUnitIterableAssertions\Constraint;
 use Iterator;
 use loophp\iterators\IterableIteratorAggregate;
 use loophp\iterators\MultipleIterableAggregate;
+use loophp\iterators\PackIterableAggregate;
 use MultipleIterator;
 use PHPUnit\Framework\Constraint\Constraint;
 
@@ -52,11 +53,11 @@ final class IsNotIdenticalIterable extends Constraint
             [$this->subject, $other]
         );
 
-        $mi = new MultipleIterableAggregate([$subject, $other], MultipleIterator::MIT_NEED_ALL);
+        $mi = new PackIterableAggregate(
+            new MultipleIterableAggregate([$subject, $other], MultipleIterator::MIT_NEED_ALL)
+        );
 
-        $index = 0;
-
-        foreach ($mi as $key => $value) {
+        foreach ($mi as $index => [$key, $value]) {
             if (0 !== $this->limit && $index >= $this->limit) {
                 break;
             }
@@ -68,8 +69,6 @@ final class IsNotIdenticalIterable extends Constraint
             if ($value[0] !== $value[1]) {
                 return true;
             }
-
-            ++$index;
         }
 
         if (0 === $this->limit) {
