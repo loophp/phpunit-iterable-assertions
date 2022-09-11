@@ -1,10 +1,9 @@
 {
     "timeout": 30,
     "source": {
-        "directories": [
-            "src"
-        ]
+        "directories": ["src"]
     },
+    "tmpDir": "build/logs/coverage/coverage-xml",
     "logs": {
         "github": true,
         "text": "build/logs/infection/infection.log",
@@ -13,8 +12,8 @@
         "perMutator": "build/logs/infection/per-mutator.md",
         "html": "build/logs/infection/report.html",
         "stryker": {
-            "report": "main"
+            "report": "master"
         }
     },
-    "testFramework":"phpunit"
+    "testFramework": "phpunit"
 }
