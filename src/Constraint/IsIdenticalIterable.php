@@ -22,20 +22,13 @@ use PHPUnit\Framework\Constraint\Constraint;
  */
 final class IsIdenticalIterable extends Constraint
 {
-    private int $limit;
-
-    /**
-     * @var iterable<TKey, T>
-     */
-    private iterable $subject;
-
     /**
      * @param iterable<TKey, T> $subject
      */
-    public function __construct(iterable $subject, int $limit = 0)
-    {
-        $this->subject = $subject;
-        $this->limit = $limit;
+    public function __construct(
+        private readonly iterable $subject,
+        private readonly int $limit = 0
+    ) {
     }
 
     public function toString(): string
@@ -43,7 +36,7 @@ final class IsIdenticalIterable extends Constraint
         return 'has exactly the same keys and values';
     }
 
-    protected function additionalFailureDescription($other): string
+    protected function additionalFailureDescription(mixed $other): string
     {
         [$subject, $other] = array_map(
             static fn (iterable $iterable): Iterator => (new IterableIteratorAggregate($iterable))->getIterator(),
@@ -85,7 +78,7 @@ final class IsIdenticalIterable extends Constraint
     /**
      * @param iterable<TKey, T> $other
      */
-    protected function matches($other): bool
+    protected function matches(mixed $other): bool
     {
         [$subject, $other] = array_map(
             static fn (iterable $iterable): Iterator => (new IterableIteratorAggregate($iterable))->getIterator(),

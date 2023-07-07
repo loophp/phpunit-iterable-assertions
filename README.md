@@ -1,9 +1,8 @@
 [![Latest Stable Version][latest stable version]][1]
 [![GitHub stars][github stars]][1] [![Total Downloads][total downloads]][1]
-[![GitHub Workflow Status][github workflow status]][2]
-[![Scrutinizer code quality][code quality]][3]
-[![Type Coverage][type coverage]][4] [![Code Coverage][code coverage]][3]
-[![License][license]][1] [![Donate!][donate github]][github sponsors link]
+[![GitHub Workflow Status][github workflow status]][github actions link]
+[![Type Coverage][type coverage]][4] [![License][license]][1]
+[![Donate!][donate github]][github sponsors link]
 
 # PHPUnit Iterable Assertions
 
@@ -96,11 +95,8 @@ For more detailed changelogs, please check [the release changelogs][45].
 [total downloads]:
   https://img.shields.io/packagist/dt/loophp/phpunit-iterable-assertions.svg?style=flat-square
 [github workflow status]:
-  https://img.shields.io/github/workflow/status/loophp/phpunit-iterable-assertions/Unit%20tests?style=flat-square
-[code quality]:
-  https://img.shields.io/scrutinizer/quality/g/loophp/phpunit-iterable-assertions/main.svg?style=flat-square
-[3]:
-  https://scrutinizer-ci.com/g/loophp/phpunit-iterable-assertions/?branch=main
+  https://img.shields.io/github/actions/workflow/status/loophp/phpunit-iterable-assertions/tests.yml?branch=main&style=flat-square
+[github actions link]: https://github.com/loophp/collection/actions
 [type coverage]:
   https://img.shields.io/badge/dynamic/json?style=flat-square&color=color&label=Type%20coverage&query=message&url=https%3A%2F%2Fshepherd.dev%2Fgithub%2Floophp%2Fphpunit-iterable-assertions%2Fcoverage
 [4]: https://shepherd.dev/github/loophp/phpunit-iterable-assertions
@@ -110,8 +106,6 @@ For more detailed changelogs, please check [the release changelogs][45].
   https://img.shields.io/packagist/l/loophp/phpunit-iterable-assertions.svg?style=flat-square
 [donate github]:
   https://img.shields.io/badge/Sponsor-Github-brightgreen.svg?style=flat-square
-[donate paypal]:
-  https://img.shields.io/badge/Sponsor-Paypal-brightgreen.svg?style=flat-square
 [33]: https://loophp-iterators.rtfd.io
 [28]: https://loophp-iterators.readthedocs.io/en/stable/pages/api.html
 [32]: https://loophp-iterators.readthedocs.io/en/stable/pages/usage.html

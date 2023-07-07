@@ -27,16 +27,16 @@
         }
     ],
     "require": {
-        "php": ">= 7.4",
+        "php": ">= 8.1",
         "loophp/iterators": "^2"
     },
     "require-dev": {
         "ext-pcov": "*",
         "drupol/php-conventions": "^5",
-        "infection/infection": "^0.26",
+        "infection/infection": "^0.27",
         "phpstan/phpstan-strict-rules": "^1.0",
-        "phpunit/php-code-coverage": "^9.2",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/php-code-coverage": "^10",
+        "phpunit/phpunit": "^10"
     },
     "autoload": {
         "psr-4": {

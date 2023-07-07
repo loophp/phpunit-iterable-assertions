@@ -22,20 +22,13 @@ use PHPUnit\Framework\Constraint\Constraint;
  */
 final class IsNotIdenticalIterable extends Constraint
 {
-    private int $limit;
-
-    /**
-     * @var iterable<TKey, T>
-     */
-    private iterable $subject;
-
     /**
      * @param iterable<TKey, T> $subject
      */
-    public function __construct(iterable $subject, int $limit = 0)
-    {
-        $this->subject = $subject;
-        $this->limit = $limit;
+    public function __construct(
+        private readonly iterable $subject,
+        private readonly int $limit = 0
+    ) {
     }
 
     public function toString(): string
@@ -46,7 +39,7 @@ final class IsNotIdenticalIterable extends Constraint
     /**
      * @param iterable<TKey, T> $other
      */
-    protected function matches($other): bool
+    protected function matches(mixed $other): bool
     {
         [$subject, $other] = array_map(
             static fn (iterable $iterable): Iterator => (new IterableIteratorAggregate($iterable))->getIterator(),

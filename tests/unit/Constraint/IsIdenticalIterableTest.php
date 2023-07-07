@@ -22,7 +22,7 @@ use PHPUnit\Framework\TestCase;
  */
 final class IsIdenticalIterableTest extends TestCase
 {
-    public function dataProvider()
+    public static function provideEvaluationCases()
     {
         yield [
             range('a', 'c'),
@@ -56,7 +56,7 @@ final class IsIdenticalIterableTest extends TestCase
     }
 
     /**
-     * @dataProvider dataProvider
+     * @dataProvider provideEvaluationCases
      */
     public function testEvaluation(
         iterable $iterable1,
