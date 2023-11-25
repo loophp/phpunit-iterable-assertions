@@ -5,10 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.3](https://github.com/loophp/phpunit-iterable-assertions/compare/1.0.2...1.0.3)
+## [1.0.4](https://github.com/loophp/phpunit-iterable-assertions/compare/1.0.3...1.0.4)
+
+### Merged
+
+- chore(deps): update actions/checkout digest to b4ffde6 [`#38`](https://github.com/loophp/phpunit-iterable-assertions/pull/38)
+- chore(deps): update actions/checkout action to v4 [`#35`](https://github.com/loophp/phpunit-iterable-assertions/pull/35)
+- chore(deps): Bump cachix/install-nix-action from 20 to 22 [`#32`](https://github.com/loophp/phpunit-iterable-assertions/pull/32)
+- chore(deps): update cachix/install-nix-action action to v20 [`#24`](https://github.com/loophp/phpunit-iterable-assertions/pull/24)
+- chore(deps): update cachix/install-nix-action action to v19 [`#23`](https://github.com/loophp/phpunit-iterable-assertions/pull/23)
+- chore(deps): update actions/stale action to v7 [`#20`](https://github.com/loophp/phpunit-iterable-assertions/pull/20)
+- chore(deps): update actions/stale action to v6 [`#18`](https://github.com/loophp/phpunit-iterable-assertions/pull/18)
+- chore(deps): add renovate.json [`#17`](https://github.com/loophp/phpunit-iterable-assertions/pull/17)
+- chore(deps): Bump cachix/install-nix-action from 17 to 18 [`#16`](https://github.com/loophp/phpunit-iterable-assertions/pull/16)
 
 ### Commits
 
+- chore: relax `loophp/iterators` dependency [`98d23e9`](https://github.com/loophp/phpunit-iterable-assertions/commit/98d23e95f15ee1affc87369a6e3967948c973c32)
+- chore: minimum PHP version is now 8.1 [`33bc6e2`](https://github.com/loophp/phpunit-iterable-assertions/commit/33bc6e23c5ec1847511a9f62620d7cac38622942)
+- chore: Update Grumphp configuration. [`d920c95`](https://github.com/loophp/phpunit-iterable-assertions/commit/d920c95ea4cda61e582d6c499f8a5c42967533c3)
+
+## [1.0.3](https://github.com/loophp/phpunit-iterable-assertions/compare/1.0.2...1.0.3) - 2022-09-11
+
+### Commits
+
+- docs: Update CHANGELOG. [`2dd5302`](https://github.com/loophp/phpunit-iterable-assertions/commit/2dd53022ed25e87e5fec0d38c5bba92f147c63af)
 - feat: Implements `additionalFailureDescription` with relevant information. [`58e2c5a`](https://github.com/loophp/phpunit-iterable-assertions/commit/58e2c5a85bd51dd85d40860ce80ccc0efdbc0a21)
 - docs: Fix README link. [`ef26266`](https://github.com/loophp/phpunit-iterable-assertions/commit/ef26266fdcb66e5467945a6b086d24eb712d7d77)
 
