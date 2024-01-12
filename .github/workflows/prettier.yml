@@ -14,7 +14,7 @@ jobs:
               uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
             - name: Install the Nix package manager
-              uses: cachix/install-nix-action@v22
+              uses: cachix/install-nix-action@v25
 
             - name: Checks
               run: nix run nixpkgs#nodePackages.prettier -- --check .
