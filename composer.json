@@ -33,7 +33,7 @@
     "require-dev": {
         "ext-pcov": "*",
         "drupol/php-conventions": "^5",
-        "infection/infection": "^0.27",
+        "infection/infection": "^0.29",
         "phpstan/phpstan-strict-rules": "^1.0",
         "phpunit/php-code-coverage": "^10",
         "phpunit/phpunit": "^10"
