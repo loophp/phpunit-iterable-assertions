@@ -19,7 +19,7 @@ jobs:
         steps:
             - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
             - id: supported-versions-matrix
-              uses: WyriHaximus/github-action-composer-php-versions-in-range@v1
+              uses: WyriHaximus/github-action-composer-php-versions-in-range@v2
     tests:
         name: "Unit Tests"
         runs-on: ${{ matrix.operating-system }}
