@@ -36,7 +36,7 @@
         "infection/infection": "^0.29",
         "phpstan/phpstan-strict-rules": "^1.0",
         "phpunit/php-code-coverage": "^10",
-        "phpunit/phpunit": "^10"
+        "phpunit/phpunit": "^13"
     },
     "autoload": {
         "psr-4": {
